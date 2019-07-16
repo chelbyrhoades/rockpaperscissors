@@ -1,0 +1,58 @@
+import random
+choices = ["rock", "paper", "scissors"]
+score = 0
+while True:
+  user = input("Choose rock, paper, or scissors. Press q to quit\n")
+  random.shuffle(choices)
+  choice = choices[0]
+  if user == "q":
+    break
+  elif user == "rock" and choice == "rock":
+    print("Tie. Rock vs. rock")
+    print("Score: ")
+    print(score)
+  elif user == "scissors" and choice == "scissors":
+    print("Tie. Scissors vs scissors")
+    print("Score: ")
+    print(score)
+  elif user == "paper" and choice == "paper":
+    print("Tie. Paper vs paper")
+    print("Score: ")
+    print(score)
+  elif user == "paper" and choice == "rock":
+    print("Win!")
+    score += 1
+    print("Score: ")
+    print(score)
+  elif user == "paper" and choice == "scissors":
+    print("Loss")
+    score -= 1
+    print("Score: ")
+    print(score)
+  elif user == "rock" and choice == "paper":
+    print("Loss")
+    score-= 1
+    print("Score: ")
+    print(score)
+  elif user == "rock" and choice == "scissors":
+    print("Win")
+    score += 1
+    print("Score: ")
+    print(score)
+  elif user == "scissors" and choice == "paper":
+    print("Win")
+    score += 1
+    print("Score: ")
+    print(score)
+  elif user == "scissors" and choice == "rock":
+    print("Loss")
+    score -= 1
+    print("Score: ")
+    print(score)
+  elif score > 3:
+    print("You won!!! Congrats!")
+    break
+  else:
+    print("Um what")
+  
+  
